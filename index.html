@@ -19,32 +19,6 @@
 <div id="header">
 </div><!-- /#header-->
 <div id="contents">
-<h1>記事の更新速度</h1>
-<form>
-<select id="seconds" size="3">
-	<option value="2">4秒</option>
-	<option value="3" selected>6秒</option>
-	<option value="4">8秒</option>
-	<option value="5">10秒</option>
-	<option value="6">12秒</option>
-	<option value="7">14秒</option>
-	<option value="8">16秒</option>
-	<option value="9">18秒</option>
-	<option value="10">20秒</option>
-	<option value="15">30秒</option>
-</select>
-</form>
-<h1>背景色</h1>
-<form>
-<select id="bg-color" size="3">
-	<option value="1">White</option>
-	<option value="2" selected>Black</option>
-	<option value="3">Cyan</option>
-	<option value="4">Green</option>
-	<option value="5">Magenta</option>
-	<option value="6">Yellow</option>
-</select>
-</form>
 <h1>文字色（見出し）</h1>
 <form>
 <select id="index-color" size="3">
@@ -78,11 +52,9 @@
 <script>
 
 function saveOptions() {
-	var seconds = parseInt($('#seconds').val());
-	var bg = parseInt($('#bg-color').val());
 	var index = parseInt($('#index-color').val());
 	var news = parseInt($('#news-color').val());
-	var sendValue =[seconds,bg,index,news];
+	var sendValue =[index,news];
 <!--alert(sendValue);-->	
 	return sendValue;
 }
