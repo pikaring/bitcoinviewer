@@ -22,7 +22,7 @@
 <h1>BitcoinViewer Ver.0.3</h1>
 <h2>Interval</h2>
 <form>
-<select id="read_time" size="5">
+<select id="readtime" size="5">
 	<option value="5">5sec</option>
 	<option value="10" selected>10sec</option>
 	<option value="30">30sec</option>
@@ -74,9 +74,9 @@
 
 <script>
 function saveOptions() {
-	var Read_Time = parseInt($('#read_time').val());
-	var Currency = parseInt($('#currency').val());
-	var sendValue =[Read_Time,Currency];
+	var readtime = parseInt($('#readtime').val());
+	var currency = parseInt($('#currency').val());
+	var sendValue =[readtime,currency];
 <!--alert(sendValue);-->	
 	return sendValue;
 }
