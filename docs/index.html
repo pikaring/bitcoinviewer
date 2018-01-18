@@ -19,52 +19,49 @@
 <div id="header">
 </div><!-- /#header-->
 <div id="contents">
-<h1>BitcoinViewer Ver.0.2</h1>
+<h1>BitcoinViewer Ver.0.3</h1>
 <h2>Interval</h2>
 <form>
 <select id="interval" size="5">
 	<option value="5">5sec</option>
-	<option value="10" selected>10sec</option>
+	<option value="10">10sec</option>
 	<option value="30">30sec</option>
-	<option value="60">1min</option>
+	<option value="60" selected>1min</option>
 	<option value="300">5min</option>
 </select>
 </form>
 <h2>Currency</h2>
 <form>
-<select id="currency" size="10">
-<option value="0">sjcx_btc</option>
-<option value="1" selected>btc_jpy</option>
-<option value="2">jpyz_jpy</option>
-<option value="3">sjcx_jpy</option>
-<option value="4">fscc_jpy</option>
-<option value="5">xcp_jpy</option>
-<option value="6">xcp_btc</option>
-<option value="7">bch_btc</option>
-<option value="8">cicc_btc</option>
-<option value="9">bch_jpy</option>
-<option value="10">bitcrystals_btc</option>
-<option value="11">pepecash_jpy</option>
-<option value="12">fscc_btc</option>
-<option value="13">mona_btc</option>
-<option value="14">zaif_jpy</option>
-<option value="15">mona_jpy</option>
-<option value="16">cicc_jpy</option>
-<option value="17">erc20.cms_jpy</option>
-<option value="18">bitcrystals_jpy</option>
-<option value="19">eth_btc</option>
-<option value="20">ncxc_btc</option>
-<option value="21">ncxc_jpy</option>
-<option value="22">pepecash_btc</option>
-<option value="23">zaif_btc</option>
-<option value="24">xem_btc</option>
-<option value="25">mosaic.cms_jpy</option>
-<option value="26">eth_jpy</option>
-<option value="27">xem_jpy</option>
+<select id="currency" size="5">
+<option value="1">sjcx_btc</option>
+<option value="2" selected>btc_jpy</option>
+<option value="3">jpyz_jpy</option>
+<option value="4">sjcx_jpy</option>
+<option value="5">fscc_jpy</option>
+<option value="6">xcp_jpy</option>
+<option value="7">xcp_btc</option>
+<option value="8">bch_btc</option>
+<option value="9">cicc_btc</option>
+<option value="10">bch_jpy</option>
+<option value="11">bitcrystals_btc</option>
+<option value="12">pepecash_jpy</option>
+<option value="13">fscc_btc</option>
+<option value="14">mona_btc</option>
+<option value="15">zaif_jpy</option>
+<option value="16">mona_jpy</option>
+<option value="17">cicc_jpy</option>
+<option value="18">erc20.cms_jpy</option>
+<option value="19">bitcrystals_jpy</option>
+<option value="20">eth_btc</option>
+<option value="21">ncxc_btc</option>
+<option value="22">ncxc_jpy</option>
+<option value="23">pepecash_btc</option>
+<option value="24">zaif_btc</option>
+<option value="25">xem_btc</option>
+<option value="26">mosaic.cms_jpy</option>
+<option value="27">eth_jpy</option>
+<option value="28">xem_jpy</option>
 </select>
-</form>
-<h2>submit</h2>
-<form>
 <p><input type="submit" id="b-save" value="save"></input></p>
 <p><input type="submit" id="b-cancel" value="cancel"></input></p>
 </form>
@@ -76,8 +73,8 @@
 
 <script>
 function saveOptions() {
-	var Interval = parseInt($('#interval').val());
-	var Currency = parseInt($('#currency').val());
+	var interval = parseInt($('#interval').val());
+	var currency = parseInt($('#currency').val());
 	var sendValue =[interval,currency];
 <!--alert(sendValue);-->	
 	return sendValue;
